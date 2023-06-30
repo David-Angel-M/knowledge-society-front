@@ -1,0 +1,9 @@
+.btn-outline-back {
+  color: var(--color-semi-dark) !important;
+  border-color: var(--color-semi-dark) !important;
+}
+
+.btn-outline-back:hover {
+  background-color: var(--color-semi-dark) !important;
+  color: var(--color-white) !important;
+}

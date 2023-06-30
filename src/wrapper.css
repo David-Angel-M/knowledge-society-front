@@ -1,0 +1,34 @@
+@media (min-width: 1200px) {
+    .content-general,
+    .navbar {
+      padding: 0 60px!important;
+    }
+  }
+  
+  @media (max-width: 1199.99px) and (min-width: 992px) {
+    .content-general,
+    .navbar {
+      padding: 0 40px!important;
+    }
+  }
+  
+  @media (max-width: 991px) and (min-width: 768px) {
+    .content-general,
+    .navbar {
+      padding: 0 30px!important;
+    }
+  }
+  
+  @media (max-width: 767px) and (min-width: 480px) {
+    .content-general,
+    .navbar {
+      padding: 0 15px!important;
+    }
+  }
+  
+  @media (max-width: 479px) {
+    .content-general,
+    .navbar {
+      padding: 0 5px!important;
+    }
+  }

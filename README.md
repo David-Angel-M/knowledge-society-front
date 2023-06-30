@@ -1,70 +1,96 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# The Knowledge Society
 
-## Available Scripts
+## 1. Project Goals
+The purpose of this project is to create a Django Rest Framework API for The Knowledge Society Web App. The design and creation of the API takes into consideration future compatibility for native app.
 
-In the project directory, you can run:
+The Knowledge Society book club is a web application to create an engaging platform where book lovers can share and comment their favorite books, fostering a vibrant community of avid readers. The application aims to provide a seamless and interactive experience for members to discover new books and expand their knowledge and literary horizons. By facilitating meaningful interactions and promoting a love for reading, The Knowledge Society aims to create a supportive and inclusive environment that encourages intellectual growth and fosters a lifelong passion for books.
 
-### `npm start`
+The primary goals of the web app are to:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Design an engaging web application with interactive user interfaces using HTML, CSS, and advanced JavaScript (React), focusing on organizing components effectively and separating different concerns. For more information.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Describe the crucial role played by specialist Front-End developers in modern software development and delivery processes, highlighting their expertise in creating user-friendly and visually appealing interfaces.
 
-### `npm test`
+Develop an Application Programming Interface (API) in the current repository that can be utilized by third-party applications, enabling seamless integration and data exchange.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Build distinct and customized models that cater to the specific needs and requirements of the application, ensuring uniqueness and efficiency in data representation.
 
-### `npm run build`
+Construct an engaging Front-End application that utilizes data from an API, allowing users to interact with and manipulate the information in an interactive and meaningful manner.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 2. Technologies I've used
+- React JS
+- React Bootstrap
+- React Router
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 3. User stories
+###  3.1 Home
+As a site user, I want to be able to publish or update posts.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+###  3.2 Create Post
+As a site user, I want to be able to create a post to publish on the blog. 
 
-### `npm run eject`
+###  3.3 Update Post
+As a site user, I want to be able to edit a post and make changes to its fields. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+###  3.4 Delete Post
+As a site user, I want to be able to delete a post so that it no longer appears on the blog. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 4. Design Structure
+### 4.1 Font
+Google Monserrat Font was chosen with to be used across the entire site.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 4.2 Colors
+| Use           | Hex     | Color                                                    |
+| ------------- | ------- | -------------------------------------------------------- |
+| Background    | #f8f9fa | ![#f8f9fa](https://via.placeholder.com/10/f8f9fa?text=+) |
+| Cards         | #fff    | ![#fff](https://via.placeholder.com/10/fff?text=+)       |
+| NavBar        | #343a40 | ![#343a40](https://via.placeholder.com/10/343a40?text=+) |
+| Footer        | #424649 | ![#424649](https://via.placeholder.com/10/424649?text=+) |
+| Btn Primary   | #6c757d | ![#6c757d](https://via.placeholder.com/10/6c757d?text=+) |
+| Inputs        | #ccc    | ![#ccc](https://via.placeholder.com/10/ccc?text=+)       |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 4.3 Navigation
+- A Navbar was created on top of the page for easy user navigation through the web app.
+- Add, Edit/Update are straightforward forms that allow users the use the features with ease.
 
-## Learn More
+## 5. Results
+[Link to the project](https://secret-front-0474d6a815cf.herokuapp.com/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 5.1 [Home](https://secret-front-0474d6a815cf.herokuapp.com/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 5.2 [Create Post](https://secret-front-0474d6a815cf.herokuapp.com/post/create)
 
-### Code Splitting
+### 5.3 [Update Post](https://secret-front-0474d6a815cf.herokuapp.com/post/edit/8)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 5.4 [Delete Post](https://secret-front-0474d6a815cf.herokuapp.com/)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 6. Testing
+### 6.1 API Endpoints Testing
+- I verify that all API endpoints are working correctly and returning the expected responses.
+- Each endpoint was tested with different HTTP methods (GET, POST, PUT, DELETE) to ensure proper functionality.
 
-### Making a Progressive Web App
+### 6.2 Data Integrity Testing
+I verify the integrity of data stored in the database by performing CRUD (Create, Read, Update, Delete) operations through the API.
+I checked that data is saved correctly, updated accurately, and deleted successfully.
+I checked that data retrieval is returned for different scenarios.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 7. Deployment
+The site was deployed using Heroku, by following the steps found in the tutorials and guidelines of CodeInstitute’s material:
 
-### Advanced Configuration
+- Using my Heroku account
+- Create a new app whilst logged in
+- Connect my GitHub repository via "Connect to GitHub" option in Heroku
+- Enable either "Automatic Deploy"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 8. Credits and references
+- Stackoverflow.
+- Student Care.
+- Slack Community.
+- W3Schools.
+- Family and Friends.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 9. Acknowledgements
+This API was created for my PP5 Project for the Full Stack Developer program with Code Institute.
+DAVID ANGEL, 2022/2023

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-const URL = "http://127.0.0.1:8000/v1";
+const URL = "https://knowledge-society-bc51a0144a7f.herokuapp.com/v1";
 
 const List = () => {
   const [postdata, setAPIData] = useState(null);

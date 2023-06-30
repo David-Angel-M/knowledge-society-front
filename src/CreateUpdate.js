@@ -73,10 +73,10 @@ const CreateUpdate = () => {
 
       <div className="text-center mt-4">
         <button className="btn btn-secondary mr-5" type="submit">
-          Guardar
+          Save
         </button>
         <Link to="/" className="btn btn-outline-back">
-          Atras
+          Go back
         </Link>
       </div>
     </form>

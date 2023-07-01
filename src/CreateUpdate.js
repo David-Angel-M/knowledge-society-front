@@ -1,82 +1,93 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+//const URL = "http://127.0.0.1:8000/v1";
 const URL = "https://knowledge-society-bc51a0144a7f.herokuapp.com/v1";
 
 const CreateUpdate = () => {
   const { Id } = useParams();
   const navigate = useNavigate();
 
-  const [title, titleSet] = useState("");
-  const [description, descriptionSet] = useState("");
+  const [categories, setCategories] = useState([]);
+  const [category, setCategory] = useState([]);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
 
   useEffect(() => {
     if (Id) {
       axios.get(`${URL}/post/${Id}/`).then((response) => {
-        titleSet(response.data.title);
-        descriptionSet(response.data.description);
+        setTitle(response.data.title);
+        setDescription(response.data.description);
       });
     }
+
+    // Fetch category list
+    axios.get(`${URL}/category-list/`).then((response) => {
+      setCategories(response.data);
+    });
   }, []);
 
   const handlesubmit = (e) => {
     e.preventDefault();
     const body = {
       title: title,
-      description: description
+      description: description,
+      category: category,
     };
 
     if (!Id) {
-      fetch(URL + "/post/", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(body),
-      })
+      axios
+        .post(URL + "/post/", body)
         .then((res) => {
           navigate("/");
         })
-        .catch((err) => {
-          console.log(err.message);
-        });
+        .catch((err) => console.log(err));
     } else {
-      fetch(URL + "/post/" + Id + "/", {
-        method: "PUT",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(body),
-      })
+      axios
+        .put(URL + "/post/" + Id + "/", body)
         .then((res) => {
           navigate("/");
         })
-        .catch((err) => {
-          console.log(err.message);
-        });
+        .catch((err) => console.log(err));
     }
   };
 
   return (
     <form onSubmit={handlesubmit}>
-
       <label className="form-label semi-bold">Name</label>
       <input
         required
         value={title}
-        onChange={(e) => titleSet(e.target.value)}
+        onChange={(e) => setTitle(e.target.value)}
         className="form-control"
       ></input>
 
       <label className="form-label semi-bold">Description</label>
       <textarea
         value={description}
-        onChange={(e) => descriptionSet(e.target.value)}
-        className="form-control"
+        onChange={(e) => setDescription(e.target.value)}
+        className="form-control mb-3"
       ></textarea>
+
+      <label className="form-label semi-bold">Category</label>
+      <select
+        name="category"
+        className="form-select"
+        onChange={(e) => setCategory(e.target.value)}
+      >
+        {categories.map((item) => (
+          <option key={item.id} value={item.id}>
+            {item.name}
+          </option>
+        ))}
+      </select>
 
       <div className="text-center mt-4">
         <button className="btn btn-secondary mr-5" type="submit">
           Save
         </button>
         <Link to="/" className="btn btn-outline-back">
-          Go back
+          Back
         </Link>
       </div>
     </form>

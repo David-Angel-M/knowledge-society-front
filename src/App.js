@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./Nav";
 import List from "./List";
 import CreateUpdate from "./CreateUpdate";
+import CategoryList from "./CategoryList";
 import Footer from "./Footer";
 import "./btn.css";
 import "./wrapper.css";
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<List />}></Route>
             <Route path="/post/create" element={<CreateUpdate />}></Route>
             <Route path="/post/edit/:Id" element={<CreateUpdate />}></Route>
+            <Route path="/category-list" element={<CategoryList />}></Route>
           </Routes>
         </BrowserRouter>
       </div>

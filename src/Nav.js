@@ -17,7 +17,7 @@ const Nav = () => {
         </button>
         <a className="navbar-brand" href="/">
           <img src={logo} alt="logo" />
-          <span> ecret society</span>
+          <span> Knowledge Society</span>
         </a>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">

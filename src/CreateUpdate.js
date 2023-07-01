@@ -64,6 +64,7 @@ const CreateUpdate = () => {
 
       <label className="form-label semi-bold">Description</label>
       <textarea
+        required
         value={description}
         onChange={(e) => setDescription(e.target.value)}
         className="form-control mb-3"

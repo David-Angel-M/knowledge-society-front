@@ -12,15 +12,13 @@ const CategoryList = () => {
       setCategories(response.data);
     });
   }, []);
-  const handlesubmit = (e) => {
-    e.preventDefault();
-    const body = {
-      category: category,
-    };
-    console.log(category);
+  const handleSubmit = (e) => {
+    e.preventDefault()  
+    const selectedCategory = category.length > 0 ? category : "1";
+    console.log(selectedCategory);
   };
   return (
-    <form onSubmit={handlesubmit}>
+    <form onSubmit={handleSubmit}>
       <select
         name="category"
         className="form-select"

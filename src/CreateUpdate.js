@@ -9,7 +9,7 @@ const CreateUpdate = () => {
   const navigate = useNavigate();
 
   const [categories, setCategories] = useState([]);
-  const [category, setCategory] = useState(1);
+  const [category, setCategory] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
@@ -18,6 +18,7 @@ const CreateUpdate = () => {
       axios.get(`${URL}/post/${Id}/`).then((response) => {
         setTitle(response.data.title);
         setDescription(response.data.description);
+        setCategory(response.data.category);
       });
     }
 
@@ -27,12 +28,13 @@ const CreateUpdate = () => {
     });
   }, []);
 
-  const handlesubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    const selectedCategory = category.length > 0 ? category : "1";
     const body = {
       title: title,
       description: description,
-      category: category,
+      category: selectedCategory,
     };
 
     if (!Id) {
@@ -53,7 +55,7 @@ const CreateUpdate = () => {
   };
 
   return (
-    <form onSubmit={handlesubmit}>
+    <form onSubmit={handleSubmit}>
       <label className="form-label semi-bold">Name</label>
       <input
         required
@@ -75,6 +77,7 @@ const CreateUpdate = () => {
         name="category"
         className="form-select"
         onChange={(e) => setCategory(e.target.value)}
+        value={category}
       >
         {categories.map((item) => (
           <option key={item.id} value={item.id}>

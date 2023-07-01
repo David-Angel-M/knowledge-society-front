@@ -9,7 +9,7 @@ const CreateUpdate = () => {
   const navigate = useNavigate();
 
   const [categories, setCategories] = useState([]);
-  const [category, setCategory] = useState([]);
+  const [category, setCategory] = useState(1);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 

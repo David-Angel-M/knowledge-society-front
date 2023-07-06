@@ -1,0 +1,21 @@
+.card-title {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  .card-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+  .card-categoy {
+    background-color: var(--color-semi-dark);
+    color: var(--color-white);
+    border-radius: 0.375rem;
+    padding: 7px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 15px;
+  }

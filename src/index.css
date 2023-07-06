@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap:wght@400;700");
+
+/* ==========================================================================
+      General
+========================================================================== */
+:root {
+  --color-border-input: #ccc;
+  --color-dark: #343a40;
+  --color-semi-dark: #424649;
+  --color-white: #fff;
+}
+body {
+  background-color: #f8f9fa !important;
+  font-family: Montserrat, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.semi-bold {
+  font-weight: 600;
+}
+.mr-5 {
+  margin-right: 5px;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+a {
+  text-decoration: none !important;
+}

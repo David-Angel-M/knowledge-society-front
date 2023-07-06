@@ -1,0 +1,30 @@
+@media (min-width: 992px) {
+  .navbar-collapse {
+    flex-grow: 0 !important;
+  }
+}
+.navbar-custom {
+  background-color: var(--color-dark);
+}
+.navbar-text,
+.nav-link,
+.nav-link:hover,
+.navbar-brand,
+.navbar-brand:hover {
+  color: var(--color-white) !important;
+}
+.nav-item a:hover {
+  background-color: var(--color-semi-dark);
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+.navbar-toggler {
+  color: var(--color-white) !important;
+  border: 1px solid !important;
+}
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}

@@ -65,11 +65,15 @@ Google Monserrat Font was chosen with to be used across the entire site.
 
 ### 5.1 [Home](https://secret-front-0474d6a815cf.herokuapp.com/)
 
-### 5.2 [Create Post](https://secret-front-0474d6a815cf.herokuapp.com/post/create)
+### 5.1 [register](https://secret-front-0474d6a815cf.herokuapp.com/register)
 
-### 5.3 [Update Post](https://secret-front-0474d6a815cf.herokuapp.com/post/edit/8)
+### 5.2 [Login](https://secret-front-0474d6a815cf.herokuapp.com/login)
 
-### 5.4 [Delete Post](https://secret-front-0474d6a815cf.herokuapp.com/)
+### 5.3 [Create Post](https://secret-front-0474d6a815cf.herokuapp.com/provider/posts)
+
+### 5.4 [Update Post](https://secret-front-0474d6a815cf.herokuapp.com/login)
+
+### 5.5 [Delete Post](https://secret-front-0474d6a815cf.herokuapp.com/login)
 
 
 ## 6. Testing

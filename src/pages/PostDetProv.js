@@ -113,9 +113,9 @@ const PostDetProvider = () => {
         <button className="btn btn-secondary mr-5" type="submit">
           Save
         </button>
-        <Link to="/" className="btn btn-outline-back">
+        <a onClick={() => navigate(-1)} className="btn btn-outline-back">
           Back
-        </Link>
+        </a>
       </div>
     </form>
   );

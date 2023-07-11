@@ -27,13 +27,19 @@ Construct an engaging Front-End application that utilizes data from an API, allo
 ###  3.1 Home
 As a site user, I want to be able to publish or update posts.
 
-###  3.2 Create Post
+###  3.2 Register
+As a site user, I want to be able to register on the application in order to publish or update posts. 
+
+###  3.3 Login
+As a As a site register user, I want to be able to log in to the application in order to publish or update posts.
+
+###  3.4 Create Post
 As a site user, I want to be able to create a post to publish on the blog. 
 
-###  3.3 Update Post
+###  3.5 Update Post
 As a site user, I want to be able to edit a post and make changes to its fields. 
 
-###  3.4 Delete Post
+###  3.6 Delete Post
 As a site user, I want to be able to delete a post so that it no longer appears on the blog. 
 
 ## 4. Design Structure

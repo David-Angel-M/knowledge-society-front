@@ -3,11 +3,14 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import AuthContext from "../context/AuthContext";
 import { URL } from "../constants/global";
+import Notification from "../components/Notification";
+import { useNotification } from "../context/NotificationContext";
 
 const PostListProv = () => {
   const [posts, setPosts] = useState([]);
   const { authTokens, logoutUser } = useContext(AuthContext);
   const navigate = useNavigate();
+  const { notification, showNotification } = useNotification();
 
   useEffect(() => {
     getPosts();
@@ -44,6 +47,7 @@ const PostListProv = () => {
           },
         })
         .then(() => {
+          showNotification("Post has been deleted successfully!");
           getData();
         });
     }

@@ -64,7 +64,14 @@ const PostListProv = () => {
 
   return (
     <div>
-      <h1 className="mb-5 text-center">Latest from Knowledge Society</h1>
+      <h1 className="mb-3 text-center">Latest from Knowledge Society</h1>
+      <p className="mb-4">
+        Hey there! Ready to share your thoughts on a book? Just click on "Add
+        Post" in the navigation bar above to start writing. And guess what? If
+        you ever want to update or say goodbye to a post, simply hit the
+        "Update" or "Delete" button inside each book card. Happy posting!
+      </p>
+      <Notification show={notification !== null} message={notification} />
       <div className="album bg-light">
         <div className="row">
           {posts.map((item) => (

@@ -130,7 +130,7 @@ I checked that data is saved correctly, updated accurately, and deleted successf
 I checked that data retrieval is returned for different scenarios.
 
 ### 7.3 Lighthouse report
-- Home page. [Result](https://)
+- Home page. [Result](https://github.com/David-Angel-M/docum-pp5/blob/main/01_Test.JPG)
 
 ### 7.4 WAVE Webaim Accessibility testing
 The WAVE tool was used to test all pages on the app. Due to empty social links some common errors were found repeatedly over each tested page, those were:
@@ -140,17 +140,18 @@ The WAVE tool was used to test all pages on the app. Due to empty social links s
 - Register page WAVE [Result](https://wave.webaim.org/report#/https://secret-front-0474d6a815cf.herokuapp.com/register)
 
 ### 7.5 CSS Validator results
-I use https://jigsaw.w3.org/css-validator/validator.html.en option Validate by direct input the style.css. [Result](https://)
+I use https://jigsaw.w3.org/css-validator/validator.html.en option Validate by direct input the style.css. [Result](https://github.com/David-Angel-M/docum-pp5/blob/main/02_Test_CSS.JPG)
 
 ### 7.6 HTML Validation
-I use https://validator.w3.org/ option Validate by URI to test html. [Result](https://)
+I use https://validator.w3.org/ option Validate by URI to test html. [Result](https://github.com/David-Angel-M/docum-pp5/blob/main/03_Test_HTML.JPG)
 
 ### 7.7 Manual Testing
 During the manual testing phase, I examined the user inputs and functionality of the website. My objective was to compare the feedback and results obtained from testing against the expected outcomes. Any unexpected outputs or outcomes encountered were promptly addressed and resolved.
 
 - Field Validation Test [Result](https://)
-- Create Post Test [Result](https://)
-- Update Post Test [Result](https://)
+- Create Post Test [Result](https://github.com/David-Angel-M/docum-pp5/blob/main/05_Create_Post.JPG)
+- Update Post Test [Result](https://github.com/David-Angel-M/docum-pp5/blob/main/04_Update_Test.JPG)
+- Delete Post Test [Result](https://github.com/David-Angel-M/docum-pp5/blob/main/06_Delete_Post.JPG)
 
 Desktop Testing:
 I thoroughly tested all aspects of the site on Chrome and Safari browser, and I am pleased to report that everything functions flawlessly. Pages load swiftly, and all features, including CRUD operations, user authentication (login/logout), register process, post addition work without any issues.

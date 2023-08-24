@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import AuthContext from "../context/AuthContext";
 import { URL } from "../constants/global";
+import { useNotification } from "../context/NotificationContext";
 
 const PostDetProvider = () => {
   const { postId } = useParams();
@@ -12,6 +13,7 @@ const PostDetProvider = () => {
   const [description, setDescription] = useState("");
   const { authTokens } = useContext(AuthContext);
   const navigate = useNavigate();
+  const { showNotification } = useNotification();
 
   useEffect(() => {
     if (postId) {
@@ -60,17 +62,20 @@ const PostDetProvider = () => {
         .post(URL + "/affiliate/posts/", body, { headers })
         .then((res) => {
           navigate("/provider/list");
+          showNotification("Post has been created successfully!");
         })
         .catch((err) => console.log(err));
     } else {
       axios
         .put(URL + "/affiliate/posts/" + postId + "/", body, { headers })
         .then((res) => {
+          showNotification("Post has been updated successfully!");
           navigate("/provider/list");
         })
         .catch((error) => {
           if (error.response && error.response.status === 403) {
             // Redirect to home page
+            showNotification("An error occurred.");
             navigate("/");
           }
         });

@@ -78,46 +78,55 @@ const PostDetProvider = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label className="form-label semi-bold">Name</label>
-      <input
-        required
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        className="form-control"
-      ></input>
+    <div>
+    <h1 className="text-center mb-4">Setting Up Your Knowledge Society Book Community</h1>
+    <p>Hey there, book enthusiast! 📚 Let's get your Knowledge Society book community up and running without a hitch. Here's your step-by-step guide to make it happen:</p>
+    <ol>
+        <li><strong>Name:</strong> Think of a name that captures the essence of your book community. This is what everyone will remember it by!</li>
+        <li><strong>Description:</strong> Give us the lowdown on your community in a few words. What's the vibe? Share a sneak peek to get everyone excited.</li>
+        <li><strong>Category:</strong> Choose the category that best suits your community's focus. Think of it as a genre for your book haven.</li>
+    </ol>
+      <form onSubmit={handleSubmit}>
+        <label className="form-label semi-bold">Name</label>
+        <input
+          required
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          className="form-control"
+        ></input>
 
-      <label className="form-label semi-bold">Description</label>
-      <textarea
-        required
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-        className="form-control mb-3"
-      ></textarea>
+        <label className="form-label semi-bold">Description</label>
+        <textarea
+          required
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          className="form-control mb-3"
+        ></textarea>
 
-      <label className="form-label semi-bold">Category</label>
-      <select
-        name="category"
-        className="form-select"
-        onChange={(e) => setCategory(e.target.value)}
-        value={category}
-      >
-        {categories.map((item) => (
-          <option key={item.id} value={item.id}>
-            {item.name}
-          </option>
-        ))}
-      </select>
+        <label className="form-label semi-bold">Category</label>
+        <select
+          name="category"
+          className="form-select"
+          onChange={(e) => setCategory(e.target.value)}
+          value={category}
+        >
+          {categories.map((item) => (
+            <option key={item.id} value={item.id}>
+              {item.name}
+            </option>
+          ))}
+        </select>
 
-      <div className="text-center mt-4">
-        <button className="btn btn-secondary mr-5" type="submit">
-          Save
-        </button>
-        <a onClick={() => navigate(-1)} className="btn btn-outline-back">
-          Back
-        </a>
-      </div>
-    </form>
+        <div className="text-center mt-4">
+          <button className="btn btn-secondary mr-5" type="submit">
+            Save
+          </button>
+          <a onClick={() => navigate(-1)} className="btn btn-outline-back">
+            Back
+          </a>
+        </div>
+      </form>
+    </div>
   );
 };
 

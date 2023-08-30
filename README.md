@@ -24,6 +24,10 @@ Construct an engaging Front-End application that utilizes data from an API, allo
 - React Router
 
 ## 3. User stories
+
+###  3.0 Trello
+https://trello.com/b/5jfBUgDf/knowledge-society-front
+
 ###  3.1 Home
 As a site user, I want to be able to log in to the application in order to publish or update posts.
 
